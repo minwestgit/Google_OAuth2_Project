@@ -24,8 +24,93 @@
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+
+		<!-- MySQL connector -->
+		<dependency> 
+			<groupId>mysql</groupId> 
+			<artifactId>mysql-connector-java</artifactId> 
+			<version>8.0.22</version> 
+		</dependency>	
+		<!-- MySQL connector -->
+
+		<!-- MyBatis -->
+		<dependency> 
+			<groupId>org.mybatis.spring.boot</groupId> 
+			<artifactId>mybatis-spring-boot-starter</artifactId> 
+			<version>2.1.3</version> 
+		</dependency>
+		<!-- MyBatis -->
+
+		<!-- jpa -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>		
+		<!-- jpa -->
+		
+		<!-- jstl 라이브러리 --> 
+		<dependency> 
+			<groupId>javax.servlet</groupId> 
+			<artifactId>jstl</artifactId> 
+		</dependency>
+		<!-- jstl 라이브러리 --> 	
+		
+		<!-- Spring Security -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>	
+		
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-taglibs</artifactId>
+		</dependency>		
+		<!-- Spring Security -->	
+		
+		<!-- Spring Security OAuth 2.0 -->		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-oauth2-client</artifactId>
+		</dependency>		
+		<!-- Spring Security OAuth 2.0 -->	
+		
+		<!-- JSON -->
+  		<dependency>
+			<groupId>com.googlecode.json-simple</groupId>
+			<artifactId>json-simple</artifactId>
+			<version>1.1</version>
+		</dependency>
+		<!-- JSON -->
+		
+		<!-- https://mvnrepository.com/artifact/org.bgee.log4jdbc-log4j2/log4jdbc-log4j2-jdbc4.1 -->
+		<dependency>
+		    <groupId>org.bgee.log4jdbc-log4j2</groupId>
+		    <artifactId>log4jdbc-log4j2-jdbc4.1</artifactId>
+		    <version>1.16</version>
+		</dependency>		
+		<!-- https://mvnrepository.com/artifact/org.bgee.log4jdbc-log4j2/log4jdbc-log4j2-jdbc4.1 -->
+		
+		<!-- lombok -->
+		<dependency> 
+			<groupId>org.projectlombok</groupId> 
+			<artifactId>lombok</artifactId> 
+			<version>1.18.20</version> 
+			<scope>provided</scope> 
+		</dependency>		
+		<!-- lombok -->
+		
+		<!-- dev tool -->
+		<dependency> 
+			<groupId>org.springframework.boot</groupId> 
+			<artifactId>spring-boot-devtools</artifactId> 
 		</dependency>
 	</dependencies>
 
