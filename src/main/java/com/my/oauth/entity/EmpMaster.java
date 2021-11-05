@@ -3,11 +3,19 @@ package com.my.oauth.entity;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinColumns;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
+
+import org.hibernate.annotations.NotFound;
+import org.hibernate.annotations.NotFoundAction;
 
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Getter
 @NoArgsConstructor
@@ -59,6 +67,25 @@ public class EmpMaster extends BaseTimeEntity {
     
     @Column
     private String create_usr;
+
+    // @@ 1:N 관계에서 EMP는 N이므로 ManyToOne 사용
+    @ManyToOne
+    @NotFound(action = NotFoundAction.IGNORE)
+    @JoinColumns({
+        @JoinColumn(name = "domain_id",   referencedColumnName = "domain_id",   insertable = false, updatable = false),
+        @JoinColumn(name = "company_cd",  referencedColumnName = "company_cd",  insertable = false, updatable = false),
+        @JoinColumn(name = "dept_cd",     referencedColumnName = "dept_cd",     insertable = false, updatable = false)
+    })
+    private DeptMaster deptMaster;
+
+    // @@ 1:N 관계에서 EMP는 N이므로 ManyToOne 사용
+    @ManyToOne
+    @NotFound(action = NotFoundAction.IGNORE)
+    @JoinColumns({
+        @JoinColumn(name = "domain_id",   referencedColumnName = "domain_id",   insertable = false, updatable = false),
+        @JoinColumn(name = "company_cd",  referencedColumnName = "company_cd",  insertable = false, updatable = false)
+    })
+    private CompanyMaster companyMaster;
 
     @Builder
     public EmpMaster(String email, String domain_id, String company_cd, String emp_nm, String emp_eng_nm, String pos_cd, String dept_cd, 
