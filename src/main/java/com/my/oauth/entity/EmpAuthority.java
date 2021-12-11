@@ -38,13 +38,13 @@ public class EmpAuthority extends BaseTimeEntity
   private String createUsr;
   
   @Builder
-  public EmpAuthority(String email, String authority_name, String domain_id, String company_cd, String update_usr, String create_usr) 
+  public EmpAuthority(String email, String authorityName, String domainId, String companyCd, String updateUsr, String createUsr) 
   {
       this.email          = email;
-      this.authorityName  = authority_name;
-      this.domainId       = domain_id;
-      this.companyCd      = company_cd;
-      this.updateUsr      = update_usr;
-      this.createUsr      = create_usr;
+      this.authorityName  = authorityName;
+      this.domainId       = domainId;
+      this.companyCd      = companyCd;
+      this.updateUsr      = updateUsr;
+      this.createUsr      = createUsr;
   }
 }

@@ -4,12 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.IdClass;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-
-import org.hibernate.annotations.NotFound;
-import org.hibernate.annotations.NotFoundAction;
 
 import lombok.Builder;
 import lombok.Getter;
@@ -51,15 +46,15 @@ public class CompanyMaster extends BaseTimeEntity
   private String createUsr;
   
   @Builder
-  public CompanyMaster(String domain_id, String company_cd, String company_nm, String company_eng_nm, String language_cd, String use_yn, String update_usr, String create_usr) 
+  public CompanyMaster(String domainId, String companyCd, String companyNm, String companyEngNm, String languageCd, String useYn, String updateUsr, String createUsr) 
   {
-      this.domainId       = domain_id;
-      this.companyCd      = company_cd;
-      this.companyNm      = company_nm;
-      this.companyEngNm   = company_eng_nm;
-      this.languageCd     = language_cd;
-      this.useYn          = use_yn;
-      this.updateUsr      = update_usr;
-      this.createUsr      = create_usr;
+      this.domainId       = domainId;
+      this.companyCd      = companyCd;
+      this.companyNm      = companyNm;
+      this.companyEngNm   = companyEngNm;
+      this.languageCd     = languageCd;
+      this.useYn          = useYn;
+      this.updateUsr      = updateUsr;
+      this.createUsr      = createUsr;
   }
 }

@@ -18,44 +18,43 @@ import lombok.NoArgsConstructor;
 public class DeptMaster extends BaseTimeEntity {
 	
     @Id
-    private String domain_id;
+    private String domainId;
     
     @Id
-    private String company_cd;
+    private String companyCd;
     
     @Id
-    private String dept_cd;
+    private String deptCd;
    
     @Column(nullable = false)
-    private String dept_nm;
+    private String deptNm;
     
     @Column
-    private String dept_eng_nm;
+    private String deptEngNm;
     
     @Column(nullable = false)
-    private String parent_dept_cd;
+    private String parentDeptCd;
     
     @Column
-    private int dept_ord;
+    private int deptOrd;
     
     @Column
-    private String update_usr;
+    private String updateUsr;
     
     @Column
-    private String create_usr;
+    private String createUsr;
 
     @Builder
-    public DeptMaster(String domain_id, String company_cd, String dept_cd, String dept_nm, String dept_eng_nm, String parent_dept_cd, int dept_ord, String update_usr, String create_usr) {
-        this.domain_id = domain_id;
-        this.company_cd = company_cd;
-        this.dept_cd = dept_cd;
-        this.dept_nm = dept_nm;
-        this.dept_eng_nm = dept_eng_nm;
-        this.dept_cd = dept_cd;
-        this.parent_dept_cd = parent_dept_cd;
-        this.dept_ord = dept_ord;
-        this.update_usr = update_usr;
-        this.create_usr = create_usr;
+    public DeptMaster(String domainId, String companyCd, String deptCd, String deptNm, String deptEngNm, String parentDeptCd, int deptOrd, String updateUsr, String createUsr) {
+        this.domainId = domainId;
+        this.companyCd = companyCd;
+        this.deptCd = deptCd;
+        this.deptNm = deptNm;
+        this.deptEngNm = deptEngNm;
+        this.parentDeptCd = parentDeptCd;
+        this.deptOrd = deptOrd;
+        this.updateUsr = updateUsr;
+        this.createUsr = createUsr;
     }
   
 }
