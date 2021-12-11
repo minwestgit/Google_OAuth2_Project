@@ -6,6 +6,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.NotFound;
@@ -92,6 +93,12 @@ public class EmpMaster extends BaseTimeEntity
     @JoinColumn(name = "company_cd",  referencedColumnName = "company_cd",  insertable = false, updatable = false)
   })
   private CompanyMaster companyMaster;
+
+  // @@ 1:1 관계
+  @OneToOne
+  @NotFound(action = NotFoundAction.IGNORE)
+  @JoinColumn(name = "email", referencedColumnName = "email", insertable = false, updatable = false)
+  private EmpConfig empConfig;
   
   @Builder
   public EmpMaster(String email, String domainId, String companyCd, String empNm, String empEngNm, String empNo, String posCd, String deptCd, 
