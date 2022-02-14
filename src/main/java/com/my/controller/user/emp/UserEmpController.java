@@ -30,7 +30,7 @@ public class UserEmpController
   public ModelAndView empMasterListView() throws Exception
   {
     SessionUser sessionUser = (SessionUser) httpSession.getAttribute("LOGIN_SESSION_USER");
-    ModelAndView mav = new ModelAndView("user/emp/empMasterListView");
+    ModelAndView mav = new ModelAndView("emp/empMasterListView");
     if (sessionUser != null) mav.addObject("sessionUser", sessionUser);
     
     return mav;
